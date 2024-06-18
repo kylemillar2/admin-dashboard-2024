@@ -42,13 +42,25 @@ main {
     background-color: var(--med-grey-background);
 }
 
-ul {
+.nav-section {
     display: flex;
     flex-direction: column;
     padding: 0;
     gap: 16px;
 }
 
-li {
+.nav-section > li,
+.nav-section > div {
+    display: flex;
+    gap: 12px;
     list-style: none;
+}
+
+.nav-section > div {
+    font-size: 1.3em;
+}
+
+.icon {
+    height: 1.2em;
+    width: 1.2em;
 }
