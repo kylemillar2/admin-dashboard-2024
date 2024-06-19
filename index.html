@@ -11,7 +11,27 @@
 <body>
     <div class="container">
         <header>
-            Header
+            <div id="header-search">
+                <img src="images/magnify.png" id="search-icon">
+                <input type="search" name="search-input" id="search-bar">
+            </div>
+            <div id="header-profile">
+                <img src="images/bell-outline.png" id="noti-icon" class="clickable">
+                <div id="header-profile-name-container" class="clickable">
+                    <img src="images/tomcat.webp" class="profile-pic">
+                    <div>Tom Cat</div>
+                </div>
+            </div>
+            <div id="header-greeting">
+                <img src="images/tomcat.webp" class="profile-pic">
+                <div id="greeting">Hi there,</div>
+                <div id="user-name">Tom Cat (@tomcat)</div>
+            </div>
+            <div id="header-buttons">
+                <button type="button" id="new-button" class="clickable">New</button>
+                <button type="button" id="upload-button" class="clickable">Upload</button>
+                <button type="button" id="share-button" class="clickable">Share</button>
+            </div>
         </header>
         <nav>
             <div class="nav-section">
@@ -21,17 +41,17 @@
                 </div>
             </div>
             <ul class="nav-section">
-                <li><img class="icon" src="images/icon-home.png">Home</li>
-                <li><img class="icon" src="images/icon-profile.png">Profile</li>
-                <li><img class="icon" src="images/icon-messages.png">Messages</li>
-                <li><img class="icon" src="images/icon-history.png">History</li>
-                <li><img class="icon" src="images/icon-tasks.png">Tasks</li>
-                <li><img class="icon" src="images/icon-communities.png">Communities</li>
+                <li class="clickable"><img class="icon" src="images/icon-home.png">Home</li>
+                <li class="clickable"><img class="icon" src="images/icon-profile.png">Profile</li>
+                <li class="clickable"><img class="icon" src="images/icon-messages.png">Messages</li>
+                <li class="clickable"><img class="icon" src="images/icon-history.png">History</li>
+                <li class="clickable"><img class="icon" src="images/icon-tasks.png">Tasks</li>
+                <li class="clickable"><img class="icon" src="images/icon-communities.png">Communities</li>
             </ul>
             <ul class="nav-section">
-                <li><img class="icon" src="images/icon-settings.png">Settings</li>
-                <li><img class="icon" src="images/icon-support.png">Support</li>
-                <li><img class="icon" src="images/icon-privacy.png">Privacy</li>
+                <li class="clickable"><img class="icon" src="images/icon-settings.png">Settings</li>
+                <li class="clickable"><img class="icon" src="images/icon-support.png">Support</li>
+                <li class="clickable"><img class="icon" src="images/icon-privacy.png">Privacy</li>
             </ul>
         </nav>
         <main>
