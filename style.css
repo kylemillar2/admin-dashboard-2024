@@ -51,8 +51,8 @@ main {
     background-color: var(--med-grey-background);
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
     padding: 2rem;
+    row-gap: 1.5rem;
 }
 
 .nav-section {
@@ -183,13 +183,11 @@ input[type="search"]:focus {
 #cards-and-header {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
 }
 
 .main-header {
     margin-bottom: 1.5rem;
-    margin-top: 0;
+    margin: 0;
 }
 
 #cards {
@@ -229,12 +227,22 @@ input[type="search"]:focus {
     align-self: end;
 }
 
-.announcements {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+#announcements-and-trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-#announcements-container {
+#cards-and-header,
+#announcements,
+#trending {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#announcements-container,
+#trending-container {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
@@ -244,7 +252,8 @@ input[type="search"]:focus {
     justify-content: space-between;
 }
 
-.announcement-item {
+.announcement-item,
+.trending-item {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -255,17 +264,39 @@ input[type="search"]:focus {
     margin: 0;
 }
 
-.announcement-item:not(:last-child) {
+.announcement-item:not(:last-child),
+.trending-item-with-border:not(:last-child) {
     padding-bottom: 1rem;
     border-bottom: 2px solid black;
 }
 
-.announcement-item:not(:first-child) {
+.announcement-item:not(:first-child),
+.trending-item-with-border:not(:first-child) {
     padding-top: 1rem;
 }
 
+.trending-item {
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
 
-.trending {
+.trending-profile-pic {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.trending-user-name {
     grid-column: 2 / 3;
-    grid-row: 2 / 3
+    grid-row: 1 / 2;
+    align-self: end;
+}
+
+.trending-title {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: start;
 }
